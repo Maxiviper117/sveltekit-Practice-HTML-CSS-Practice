@@ -22,7 +22,7 @@
 		A confirmation email has been sent to <a href="/">{email}</a>. Please open it and click the
 		button inside to confirm your subscription.
 	</p>
-	<button> Dismiss message </button>
+	<button>Dismiss message</button>
 </div>
 
 <style lang="scss">
@@ -39,20 +39,52 @@
 		svg {
 			width: 50px;
 			height: 50px;
+			flex-shrink: 0;
 		}
 
 		p {
 			margin-bottom: 1rem;
 		}
 
+		@media (max-width: 374px) {
+			width: 100vw;
+			height: 100vh;
+			max-width: none;
+			border-radius: 0;
+			margin: none;
+		}
+
 		button {
-			background-color: var.$primary-color;
+			background: var.$dark-slate-gray;
 			color: white;
-			font-weight: 400;
+			font-weight: bold;
+
 			padding: 0.75rem 1rem;
 			border: none;
 			border-radius: 5px;
 			box-shadow: none;
+
+			transition: transform 0.3s;
+
+			cursor: pointer;
+
+			@media (max-width: 374px) {
+				margin-top: 5rem;
+			}
+			&:hover {
+				background: linear-gradient(
+					to right,
+					hsla(340, 100%, 50%, 1),
+					hsla(0, 100%, 50%, 1),
+					hsla(10, 100%, 50%, 1)
+				);
+
+				opacity: 0.7;
+
+				box-shadow: 0 10px 20px 5px rgba(var.$primary-color, 0.5);
+
+				transform: scale(1.05);
+			}
 		}
 	}
 </style>
