@@ -1,0 +1,38 @@
+@use "variables" as *;
+@import "@fontsource/roboto/400";
+@import "@fontsource/roboto/700";
+
+// Global styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+    font-size: 16px;
+    color: $font-color;
+    background-color: $background-color;
+}
+
+p {
+    color: inherit;
+    font-weight: 400;
+}
+
+a {
+    color: $link-color;
+    text-decoration: none;
+    font-weight: 700;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
