@@ -1,6 +1,7 @@
 <script lang="ts">
 	//
 
+	import DesktopDesign from '$lib/components/desktop-design.svelte';
 	import DesktopSucess from '$lib/components/desktop-sucess.svelte';
 </script>
 
@@ -11,6 +12,7 @@
 
 <div class="container">
 	<DesktopSucess />
+	<DesktopDesign />
 </div>
 
 <style lang="scss">
@@ -19,6 +21,9 @@
 	}
 
 	.container {
+		display: flex;
+		flex-direction: column;
 		padding: 2rem 0;
+		gap: 2rem;
 	}
 </style>
