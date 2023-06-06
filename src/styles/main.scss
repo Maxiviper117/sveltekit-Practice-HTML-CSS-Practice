@@ -8,9 +8,20 @@
     padding: 0;
     box-sizing: border-box;
 }
+// static/assets/fonts/HankenGrotesk-VariableFont_wght.ttf
+@font-face {
+    font-family: "Hanken Grotesk";
+    src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
 
 body {
-    font-family: $font-family;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
     font-size: 16px;
     color: $font-color;
     background-color: $background-color;
